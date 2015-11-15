@@ -114,9 +114,9 @@ public class AverageMonthlyExpenditurePdf extends java.lang.Thread {
 
             while (everythingSet.next()) {
 
+                // The if statement will not run on the first iteration but it will control output to file thereafter
                 if (monthNo == Integer.parseInt(sdf.format(everythingSet.getDate(4)))) {
-                    //continue adding items ignore new month
-
+                    
                     for (int i = 0; i < vector.size(); i++) {
                         particularsSet = particularsStat.executeQuery("SELECT sum(qty), avg(price), sum(totals) FROM view_of_expenses_combined "
                                 + "WHERE other_foreign_code='" + vector.elementAt(i) + "' "
