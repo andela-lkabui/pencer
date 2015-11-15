@@ -178,30 +178,30 @@ public class AverageMonthlyExpenditurePdf extends java.lang.Thread {
                         case 1:
                             monthName = "January";
 
-                            beginDate = "2014-01-01";
-                            endDate = "2014-01-31";
+                            beginDate = year + "-01-01";
+                            endDate = year + "-01-31";
 
                             break;
 
                         case 2:
                             monthName = "February";
 
-                            beginDate = "2014-02-01";
+                            beginDate = year + "-02-01";
 
                             if (year % 4 == 0) {
-                                endDate = "2014-02-29";
+                                endDate = year + "-02-29";
                             } else {
-                                endDate = "2014-02-28";
+                                endDate = year + "-02-28";
                             }
-
+                            
                             break;
 
                         case 3:
 
                             monthName = "March";
 
-                            beginDate = "2014-03-01";
-                            endDate = "2014-03-31";
+                            beginDate = year + "-03-01";
+                            endDate = year + "-03-31";
 
                             break;
 
@@ -209,8 +209,8 @@ public class AverageMonthlyExpenditurePdf extends java.lang.Thread {
 
                             monthName = "April";
 
-                            beginDate = "2014-04-01";
-                            endDate = "2014-04-30";
+                            beginDate = year + "-04-01";
+                            endDate = year + "-04-30";
 
                             break;
 
@@ -218,8 +218,8 @@ public class AverageMonthlyExpenditurePdf extends java.lang.Thread {
 
                             monthName = "May";
 
-                            beginDate = "2014-05-01";
-                            endDate = "2014-05-31";
+                            beginDate = year + "-05-01";
+                            endDate = year + "-05-31";
 
                             break;
 
@@ -227,8 +227,8 @@ public class AverageMonthlyExpenditurePdf extends java.lang.Thread {
 
                             monthName = "June";
 
-                            beginDate = "2014-06-01";
-                            endDate = "2014-06-30";
+                            beginDate = year + "-06-01";
+                            endDate = year + "-06-30";
 
                             break;
 
@@ -236,8 +236,8 @@ public class AverageMonthlyExpenditurePdf extends java.lang.Thread {
 
                             monthName = "July";
 
-                            beginDate = "2014-07-01";
-                            endDate = "2014-07-31";
+                            beginDate = year + "-07-01";
+                            endDate = year + "-07-31";
 
                             break;
 
@@ -245,8 +245,8 @@ public class AverageMonthlyExpenditurePdf extends java.lang.Thread {
 
                             monthName = "August";
 
-                            beginDate = "2014-08-01";
-                            endDate = "2014-08-31";
+                            beginDate = year + "-08-01";
+                            endDate = year + "-08-31";
 
                             break;
 
@@ -254,8 +254,8 @@ public class AverageMonthlyExpenditurePdf extends java.lang.Thread {
 
                             monthName = "September";
 
-                            beginDate = "2014-09-01";
-                            endDate = "2014-09-30";
+                            beginDate = year + "-09-01";
+                            endDate = year + "-09-30";
 
                             break;
 
@@ -263,8 +263,8 @@ public class AverageMonthlyExpenditurePdf extends java.lang.Thread {
 
                             monthName = "October";
 
-                            beginDate = "2014-10-01";
-                            endDate = "2014-10-31";
+                            beginDate = year + "-10-01";
+                            endDate = year + "-10-31";
 
                             break;
 
@@ -272,8 +272,8 @@ public class AverageMonthlyExpenditurePdf extends java.lang.Thread {
 
                             monthName = "November";
 
-                            beginDate = "2014-11-01";
-                            endDate = "2014-11-30";
+                            beginDate = year + "-11-01";
+                            endDate = year + "-11-30";
 
                             break;
 
@@ -281,8 +281,8 @@ public class AverageMonthlyExpenditurePdf extends java.lang.Thread {
 
                             monthName = "December";
 
-                            beginDate = "2014-12-01";
-                            endDate = "2014-12-31";
+                            beginDate = year + "-12-01";
+                            endDate = year + "-12-31";
 
                             break;
 
