@@ -104,7 +104,8 @@ public class ExpensesBreakdownPdf extends java.lang.Thread{
             
             
             java.sql.Statement distStt=connection.createStatement();
-            java.sql.ResultSet distRset=distStt.executeQuery("SELECT DISTINCT other_foreign_code FROM view_of_expenses_combined ORDER BY 1");
+            java.sql.ResultSet distRset=distStt.executeQuery("SELECT DISTINCT other_foreign_code FROM view_of_expenses_combined "
+                                                            + "WHERE buy_date BETWEEN '" + beginDate + "' AND '" + endDate + "' ORDER BY 1");
             vector=new java.util.Vector();
             
             while(distRset.next()){
@@ -120,8 +121,9 @@ public class ExpensesBreakdownPdf extends java.lang.Thread{
             
             distStt=connection.createStatement();
             
+            int vLength = vector.size();
             
-            for(int ind=0;ind<vector.size();ind++){
+            for(int ind=0; ind<vLength; ind++){
                 distRset=distStt.executeQuery("SELECT SUM(totals) FROM view_of_expenses_combined WHERE other_foreign_code='"+vector.elementAt(ind)+"' AND buy_date BETWEEN '"+beginDate+"' AND '"+endDate+"'");
                 
                 while(distRset.next()){
